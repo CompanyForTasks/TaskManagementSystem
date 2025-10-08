@@ -1,12 +1,14 @@
 using DevOps.Enums;
 
-namespace DevOps.Interfaces;
+namespace TaskManagementSystem.Interfaces;
 
 /// <summary>
 /// Worker class interpreet classic worker that have own tasks 
 /// </summary>
 public interface IWorker
 {
+    Guid Id { get; set; }
+
     string FirstName { get; set; }
     string LastName { get; set; }
     int Age { get; set; }
@@ -19,14 +21,14 @@ public interface IWorker
     /// </summary>
     /// <param name="task"> Task to add</param>
     void AddTask(ITask task);
-    
+
     /// <summary>
     /// Changes status of selected Task from worker task list
     /// </summary>
     /// <param name="task">Task to change status of</param>
     /// <param name="status">Status to set</param>
-    void ChangeStatusTask(ITask task, Status status );
-    
+    void ChangeStatusTask(ITask task, Status status);
+
     /// <summary>
     /// Delete task from worker task list
     /// </summary>
