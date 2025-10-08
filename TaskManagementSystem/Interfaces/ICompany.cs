@@ -1,4 +1,4 @@
-namespace DevOps.Interfaces;
+namespace TaskManagementSystem.Interfaces;
 /// <summary>
 /// Company that has Name Description and workers \ can hire and fire `em
 /// </summary>
@@ -6,7 +6,7 @@ public interface ICompany
 {
     string Name { get; set; }
     string Description { get; set; } //Description like what this company is doing?
-    
+
     List<IWorker> Workers { get; }
 
     /// <summary>
@@ -19,7 +19,6 @@ public interface ICompany
     /// Fire worker (remove) from company
     /// </summary>
     /// <param name="id">Id of worker to fire</param>
-    bool FireWorkerAt(int id);
-
+    bool FireWorkerAt(Guid id); // How to find worker ID?
 
 }
