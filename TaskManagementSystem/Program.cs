@@ -14,7 +14,7 @@ class Program
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("Lab1 Menu:");
+            Console.WriteLine("Program Menu:");
             Console.WriteLine("1. Manage Companies");
             Console.WriteLine("2. Manage Workers");
             Console.WriteLine("3. Manage Tasks");
