@@ -1,0 +1,15 @@
+diff --git a/TaskManagementSystem/Classes/Company.cs b/TaskManagementSystem/Classes/Company.cs
+index 105664b..1e443cf 100644
+--- a/TaskManagementSystem/Classes/Company.cs
++++ b/TaskManagementSystem/Classes/Company.cs
+@@ -4,6 +4,7 @@ namespace TaskManagementSystem.Classes;
+ 
+ public class Company : ICompany
+ {
++    // Назва компанії
+     public string Name { get; set; } = string.Empty;
+     public string Description { get; set; } = string.Empty;
+     public List<IWorker> Workers { get; } = new List<IWorker>();
+diff --git a/changes.patch b/changes.patch
+new file mode 100644
+index 0000000..e69de29

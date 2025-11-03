@@ -4,6 +4,7 @@ namespace TaskManagementSystem.Classes;
 
 public class Company : ICompany
 {
+    // Назва компанії
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public List<IWorker> Workers { get; } = new List<IWorker>();
