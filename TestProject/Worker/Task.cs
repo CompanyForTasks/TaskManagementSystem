@@ -1,24 +1,22 @@
-namespace TaskManagementSystem.Tests;
-using TaskManagementSystem.Classes;
-using NUnit.Framework.Internal;
-using NUnit.Framework;
+
+namespace TestProject.Worker;
 
 public class WorkerTaskTest
 {
     [Test]
     public void TaskTest1()
     {
-        Worker worker = new();
-        Task task = new();
+        TaskManagementSystem.Classes.Worker worker = new();
+        TaskManagementSystem.Classes.Task task = new();
         worker.AddTask(task);
         Assert.That(worker.Tasks.First(), Is.EqualTo(task));
     }
     [Test]
     public void TaskTest2()
     {
-        Worker worker = new();
-        Task task = new();
-        Task task2 = new();
+        TaskManagementSystem.Classes.Worker worker = new();
+        TaskManagementSystem.Classes.Task task = new();
+        TaskManagementSystem.Classes.Task task2 = new();
         worker.AddTask(task);
         worker.AddTask(task2);
         _ = worker.DeleteTaskAt(0);
