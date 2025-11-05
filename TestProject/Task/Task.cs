@@ -1,8 +1,6 @@
-using TaskManagementSystem.Tests;
-using TaskManagementSystem.Classes;
 using TaskManagementSystem.Enums;
-using NUnit.Framework.Internal;
-namespace TaskManagementSystem.Tests;
+
+namespace TestProject.Task;
 
 public class TaskTest
 {
@@ -25,7 +23,7 @@ public class TaskTest
     [Test]
     public void StatusTest()
     {
-        Worker worker = new();
+        TaskManagementSystem.Classes.Worker worker = new();
         TaskManagementSystem.Classes.Task task = new();
         worker.AddTask(task);
         worker.ChangeStatusTask(task, Status.Done);

@@ -6,8 +6,7 @@ public class Company : ICompany
 {
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
-    public List<IWorker> Workers { get; } = new List<IWorker>();
-
+    public List<IWorker> Workers { get; set; }
     public void HireWorker(IWorker worker)
     {
         if (worker != null && !Workers.Contains(worker))

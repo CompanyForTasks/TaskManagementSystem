@@ -62,7 +62,9 @@ class Program
                     var name = Console.ReadLine();
                     Console.Write("Enter company description: ");
                     var description = Console.ReadLine();
-                    companies.Add(new Company { Name = name, Description = description });
+                    Company company = new Company { Name = name, Description = description };
+                    company.Workers = new List<IWorker>();
+                    companies.Add(company);
                     Console.WriteLine("Company created. Press any key to continue...");
                     _ = Console.ReadKey();
                     break;
