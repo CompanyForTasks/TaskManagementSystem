@@ -1,4 +1,4 @@
-namespace DevOps.Enums;
+namespace TaskManagementSystem.Enums;
 
 /// <summary>
 /// Classic kanban statuses for tasks
