@@ -47,4 +47,24 @@ public class WorkerListTest
         _ = company.FireWorkerAt(worker2.Id); // I assume ID is their number in the list.
         Assert.AreEqual(worker1.Id, company.Workers.ElementAt(0).Id);
     }
+
+    [Test]
+    public void HireWorker_WithMockWorker_ShouldBeAddedToList()
+    {
+
+        TaskManagementSystem.Classes.Company company = new();
+        company.Workers = new List<IWorker>();
+
+
+        IWorker mockWorker = null;
+
+        // TODO: Програмісту - Ініціалізувати mockWorker,
+        // налаштувати mockWorker.Id, щоб він повертав 999.
+
+        company.HireWorker(mockWorker);
+
+
+        Assert.AreEqual(1, company.Workers.Count);
+        Assert.AreEqual(mockWorker, company.Workers.ElementAt(0));
+    }
 }
